@@ -1,3 +1,4 @@
+export {galleryItems}
 const galleryItems = [
   {
     preview:
