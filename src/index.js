@@ -21,14 +21,18 @@ ref.gallery.insertAdjacentHTML('afterbegin', getImage(galleryItems));
 function addLightbox(e1) {
     ref.lightbox.classList.add('is-open');
     ref.lightBoxImg.src = e1.target.dataset.url;
-    window.addEventListener('keydown', e => {
-        console.log(e);
-    if (e.key == 'Escape') {
+    window.addEventListener('keydown', e2 => {
+        if (e2.key == 'Escape') {
+        console.dir(e1.target)
         closeLightBox();                 
         }
-        if (e.key == 'ArrowLeft') {
-            console.dir(e1.target)
-        }
+        // if (e2.key == 'ArrowLeft') {
+        //     ref.lightBoxImg.src = e1.target.parentNode.previousSibling.firstChild.dataset.url;
+        //     console.dir(e1)
+        // };
+        //         if (e2.key == 'ArrowRight') {
+        //     ref.lightBoxImg.src = e1.target.parentNode.nextSibling.firstChild.dataset.url;     
+        // };
  })
     
 };
